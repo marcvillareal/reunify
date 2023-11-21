@@ -23,7 +23,7 @@ export default function Login() {
               />
             </div>
             <div className="form-control mt-6">
-              <button className="btn btn-default font-bold">Login</button>
+              <button className="btn btn-accent font-bold">Login</button>
             </div>
           </form>
         </div>
