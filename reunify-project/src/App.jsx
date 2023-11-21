@@ -1,14 +1,13 @@
 import "./App.css";
+import Navbar from "./components/Navbar";
+import Login from "./pages/Login"
 
 function App() {
   return (
-    <>
-      <div></div>
-      <h1 className="font-bold">Reunify</h1>
-      <p className="read-the-docs">
-        In development
-      </p>
-    </>
+    <div>
+      <Navbar/>
+      <Login />
+    </div>
   );
 }
 
