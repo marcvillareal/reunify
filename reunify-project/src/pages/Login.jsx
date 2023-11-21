@@ -2,39 +2,28 @@ export default function Login() {
   return (
     <div className="hero min-h-screen bg-reunify-white">
       <div className="hero-content flex-col lg:flex-row-reverse">
-        <div className="text-center lg:text-left">
-        </div>
-        <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+        <div className="text-center lg:text-left"></div>
+        <div className="card shrink-0 w-96 mb-36 max-w-sm">
+          <img className="w-44 ml-24 justify-between items-center" src="/reunify-black.png" />
           <form className="card-body">
             <div className="form-control">
-              <label className="label">
-                <span className="label-text">Email</span>
-              </label>
               <input
-                type="email"
-                placeholder="email"
+                type="Username"
+                placeholder="Username"
                 className="input input-bordered"
                 required
               />
             </div>
             <div className="form-control">
-              <label className="label">
-                <span className="label-text">Password</span>
-              </label>
               <input
-                type="password"
-                placeholder="password"
+                type="Password"
+                placeholder="Password"
                 className="input input-bordered"
                 required
               />
-              <label className="label">
-                <a href="#" className="label-text-alt link link-hover">
-                  Forgot password?
-                </a>
-              </label>
             </div>
             <div className="form-control mt-6">
-              <button className="btn btn-primary">Login</button>
+              <button className="btn btn-default font-bold">Login</button>
             </div>
           </form>
         </div>
