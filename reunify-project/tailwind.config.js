@@ -9,7 +9,8 @@ export default {
       colors: {
         "reunify-grey": "#2A333A",
         "reunify-white": "#E6EAF1",
-        "reunify-light-blue": "41C1BA",
+        "reunify-light-blue": "#41C1BA",
+        "reunify-blue": "#7C9BD9",
       },
     },
   },

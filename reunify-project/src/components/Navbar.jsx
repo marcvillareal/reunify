@@ -1,17 +1,45 @@
-export default function Navbar() {
+import {
+  Card,
+  Typography,
+  List,
+  ListItem,
+  ListItemPrefix,
+} from "@material-tailwind/react";
+import {
+  HomeIcon,
+  ChatBubbleBottomCenterIcon,
+  InboxIcon,
+  CalendarIcon,
+  Cog6ToothIcon,
+  PowerIcon,
+} from "@heroicons/react/24/solid";
+
+import { Link } from "react-router-dom";
+
+export const Navbar = () => {
   return (
     <div>
-      <div className="navbar bg-reunify-grey">
-        <div className="navbar-start"></div>
-        <div className="navbar-center">
-          <a className="btn btn-ghost text-4xl text-white font-body tracking-widest">
-            <img src="/reunify.png" className="h-9" />R E U N I F Y
-          </a>
+      <Card className="h-[calc(100vh-2rem)] w-full max-w-[5rem] p-4 shadow-xl bg-reunify-blue">
+        <div className="mb-2 p-4">
+          <Typography variant="h5" color="gray"></Typography>
         </div>
-        <div className="navbar-end">
-          <button className="btn btn-ghost btn-circle"></button>
-        </div>
-      </div>
+        <List>
+          {[
+            { icon: <Link to="/chatroom"><HomeIcon className="h-10 w-10 mb-5 text-gray-800" /></Link> },
+            { icon: <ChatBubbleBottomCenterIcon className="h-10 w-10 mb-5 text-gray-800" /> },
+            { icon: <InboxIcon className="h-10 w-10 mb-5 text-gray-800" /> },
+            { icon: <CalendarIcon className="h-10 w-10 mb-5 text-gray-800" /> },
+            { icon: <Cog6ToothIcon className="h-10 w-10 mb-5 text-gray-800" /> },
+            { icon: <Link to="/"><PowerIcon className="h-10 w-10 mb-5 text-gray-800" /></Link> },
+          ].map((item, index) => (
+            <ListItem key={index}>
+              <ListItemPrefix>{item.icon}</ListItemPrefix>
+            </ListItem>
+          ))}
+        </List>
+      </Card>
     </div>
   );
-}
+};
+
+export default Navbar;
