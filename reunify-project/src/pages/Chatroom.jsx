@@ -58,8 +58,8 @@ const Chatroom = () => {
   //   console.log(outgoingMessages, "DEFAULT");
   // }, [outgoingMessages]);
   return (
-    <>
-      <div className="message bg-slate-500 flex items-center justify-center gap-10">
+    <div className="chatroom h-[calc(100vh-2rem)]">
+      <div className="permButtons bg-slate-500 flex items-center justify-center gap-10">
         <button
           className={`submitButton btn rounded-none text-white ${
             currentUser.role === "FOSTER_CHILD" && "bg-green-400"
@@ -86,18 +86,17 @@ const Chatroom = () => {
         </button>
       </div>
 
-      <div className="h-80">
-        <div className="chatroom bg-reunify-white h-full flex justify-center">
-          <div className="messageHolder w-3/4 bg-slate-300">
-            <MessageRenderer
-              textMessages={messages}
-              currentUser={currentUser}
-              setMessages={setMessages}
-            />
-          </div>
+      <div className="chatroom bg-reunify-white h-[calc(82vh-2rem)] flex justify-center ">
+        <div className="messageHolder w-3/4 bg-slate-300 scroll-auto h-[calc(90vh-2rem)]">
+          <MessageRenderer
+            textMessages={messages}
+            currentUser={currentUser}
+            setMessages={setMessages}
+          />
         </div>
       </div>
-      <div className="message bg-slate-500 flex flex-col items-center justify-center  h-40 ">
+
+      <div className="message bg-slate-500 flex flex-col items-center justify-center h-20 relative mt-200">
         <div className="textbox w-4/5 flex justify-center">
           <input
             className="message-input input rounded-none w-3/4 bg-white border-solid border-l-black-950 text-black"
@@ -116,7 +115,7 @@ const Chatroom = () => {
           </button>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
