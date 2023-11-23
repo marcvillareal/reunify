@@ -1,7 +1,7 @@
 import Message from "./Message";
 const MessageRenderer = ({ textMessages, currentUser, setMessages }) => {
   return (
-    <div>
+    <>
       {textMessages.map((textMessage, index) => (
         <Message
           key={`textMessage-${index}`}
@@ -11,7 +11,7 @@ const MessageRenderer = ({ textMessages, currentUser, setMessages }) => {
           setMessages={setMessages}
         ></Message>
       ))}
-    </div>
+    </>
   );
 };
 
