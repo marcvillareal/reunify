@@ -19,18 +19,36 @@ import { Link } from "react-router-dom";
 export const Navbar = () => {
   return (
     <div>
-      <Card className="h-[calc(100vh-2rem)] w-full max-w-[5rem] p-4 shadow-xl bg-reunify-blue">
+      <Card className="h-[calc(100vh-2rem)] float-left p-4 shadow-xl bg-reunify-blue">
         <div className="mb-2 p-4">
           <Typography variant="h5" color="gray"></Typography>
         </div>
         <List>
           {[
-            { icon: <Link to="/chatroom"><HomeIcon className="h-10 w-10 mb-5 text-gray-800" /></Link> },
-            { icon: <ChatBubbleBottomCenterIcon className="h-10 w-10 mb-5 text-gray-800" /> },
+            {
+              icon: (
+                <Link to="/chatroom">
+                  <HomeIcon className="h-10 w-10 mb-5 text-gray-800" />
+                </Link>
+              ),
+            },
+            {
+              icon: (
+                <ChatBubbleBottomCenterIcon className="h-10 w-10 mb-5 text-gray-800" />
+              ),
+            },
             { icon: <InboxIcon className="h-10 w-10 mb-5 text-gray-800" /> },
             { icon: <CalendarIcon className="h-10 w-10 mb-5 text-gray-800" /> },
-            { icon: <Cog6ToothIcon className="h-10 w-10 mb-5 text-gray-800" /> },
-            { icon: <Link to="/"><PowerIcon className="h-10 w-10 mb-5 text-gray-800" /></Link> },
+            {
+              icon: <Cog6ToothIcon className="h-10 w-10 mb-5 text-gray-800" />,
+            },
+            {
+              icon: (
+                <Link to="/">
+                  <PowerIcon className="h-10 w-10 mb-5 text-gray-800" />
+                </Link>
+              ),
+            },
           ].map((item, index) => (
             <ListItem key={index}>
               <ListItemPrefix>{item.icon}</ListItemPrefix>
